@@ -95,6 +95,9 @@ result
 <div class="myClassName" id="myId" onclick="myFunction()"></div>
 ```
 
+
+
+
 ### Structured
 * Add one element
 ```php
@@ -118,7 +121,9 @@ $div->addChlidren([
 result
 
 ```html
-<div><p></p></div>
+<div>
+    <p></p>
+</div>
 ```
 * Add more elements
 ```php
@@ -158,3 +163,30 @@ result
     <p></p>
 </div>
 ```
+
+### More
+* generate attributes
+```php
+setAtributeName('value')
+```
+result
+```html
+atribute-name="value"
+```
+example data-*
+```php
+setDataAnimalType('bird');
+```
+result
+```html
+data-animal-type="bird"
+```
+example disabled
+```php
+setDisabled(true);
+```
+result
+```html
+disabled
+```
+
