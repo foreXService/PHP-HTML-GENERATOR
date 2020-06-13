@@ -41,9 +41,9 @@ result
 new TagGenerator([
         'tagName'=>'div',
         'echoHtml'=>true,
-        'atribute'=>[
+        'atributes'=>[
             'class'=>'myClassName'
-            ]
+        ]
     ]);
 ```
 or
@@ -64,18 +64,32 @@ result
 new TagGenerator([
         'tagName'=>'div',
         'echoHtml'=>true,
-        'atribute'=>[
-            'class'=>'myClassName'
-            ]
+        'atributes'=>[
+            'class'=>'myClassName',
+            'id'=>'myId',
+            'onclick'='myFunction()'
+        ]
     ]);
 ```
 or
 ```php
-$div->setAtribute('class','myClassName');
+$div->setAtribute('class','myClassName')
+    ->setAtribute('id','myId')
+    ->setAtribute('onclick','myFunction()');
 ```
 or
 ```php
-$div->setClass('myClassName');
+$div->setAtributes([
+        'class'=>'myClassName',
+        'id'=>'myId',
+        'onclick'='myFunction()'
+    ]);
+```
+or
+```php
+$div->setClass('myClassName')
+    ->setId('myId')
+    ->setOnclick('myFunction()');
 ```
 result
 
