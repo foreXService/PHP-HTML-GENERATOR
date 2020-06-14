@@ -4,7 +4,7 @@ Create HTML tags in php code .
 ## Create 
 
 ```php
-$div = new TagGenerator()->setTagName('div');
+$div = (new TagGenerator())->setTagName('div');
 ```
 or
 
@@ -35,19 +35,19 @@ result
 <div></div>
 ```
 
-## Atributes
+## Attributes
 * One attribute
 ```php
 new TagGenerator([
         'tagName'=>'div',
-        'atributes'=>[
+        'attributes'=>[
             'class'=>'myClassName'
         ]
     ]);
 ```
 or
 ```php
-$div->setAtribute('class','myClassName');
+$div->setAttribute('class','myClassName');
 ```
 or
 ```php
@@ -62,25 +62,25 @@ result
 ```php
 new TagGenerator([
         'tagName'=>'div',
-        'atributes'=>[
+        'attributes'=>[
             'class'=>'myClassName',
             'id'=>'myId',
-            'onclick'='myFunction()'
+            'onclick'=>'myFunction()'
         ]
     ]);
 ```
 or
 ```php
-$div->setAtribute('class','myClassName')
-    ->setAtribute('id','myId')
-    ->setAtribute('onclick','myFunction()');
+$div->setAttribute('class','myClassName')
+    ->setAttribute('id','myId')
+    ->setAttribute('onclick','myFunction()');
 ```
 or
 ```php
-$div->setAtributes([
+$div->setAttributes([
         'class'=>'myClassName',
         'id'=>'myId',
-        'onclick'='myFunction()'
+        'onclick'=>'myFunction()'
     ]);
 ```
 or
@@ -92,7 +92,7 @@ $div->setClass('myClassName')
 result
 
 ```html
-<div class="myClassName" id="myId" onclick="myFunction()"></div>
+<div id="myId" class="myClassName" onclick="myFunction()"></div>
 ```
 
 
@@ -104,18 +104,18 @@ result
 new TagGenerator([
         'tagName'=>'div',
         'children'=>[
-            new TagGenerator(['p'])
+            new TagGenerator(['tagName'=>'p'])
         ]
     ]);
 ```
 or
 ```php
-$div->addChlid(new TagGenerator(['p']));
+$div->addChild(new TagGenerator(['tagName'=>'p']));
 ```
 or
 ```php
-$div->addChlidren([
-    new TagGenerator(['p'])
+$div->addChildren([
+    new TagGenerator(['tagName'=>'p'])
 ]);
 ```
 result
@@ -131,26 +131,26 @@ new TagGenerator([
         'tagName'=>'div',
         'children'=>[
             'Hello !!!',
-            new TagGenerator(['p']),
-            new TagGenerator(['p']),
-            new TagGenerator(['p'])
+            new TagGenerator(['tagName'=>'p']),
+            new TagGenerator(['tagName'=>'p']),
+            new TagGenerator(['tagName'=>'p'])
         ]
     ]);
 ```
 or
 ```php
-$div->addChlid('Hello !!!')
-    ->addChlid(new TagGenerator(['p']))
-    ->addChlid(new TagGenerator(['p']))
-    ->addChlid(new TagGenerator(['p']));
+$div->addChild('Hello !!!')
+    ->addChild(new TagGenerator(['tagName'=>'p']))
+    ->addChild(new TagGenerator(['tagName'=>'p']))
+    ->addChild(new TagGenerator(['tagName'=>'p']));
 ```
 or
 ```php
-$div->addChlidren([
+$div->addChildren([
     'Hello !!!',
-    new TagGenerator(['p']),
-    new TagGenerator(['p']),
-    new TagGenerator(['p'])
+    new TagGenerator(['tagName'=>'p']),
+    new TagGenerator(['tagName'=>'p']),
+    new TagGenerator(['tagName'=>'p'])
 ]);
 ```
 result
@@ -166,11 +166,11 @@ result
 
 ### How to generate attributes
 ```php
-setAtributeName('value')
+setAttributeName('value')
 ```
 result
 ```html
-atribute-name="value"
+attribute-name="value"
 ```
 example attribute data-*
 ```php
