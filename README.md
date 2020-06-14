@@ -165,7 +165,7 @@ result
 ```
 
 ### More
-* generate attributes
+* how to generate attributes
 ```php
 setAtributeName('value')
 ```
@@ -173,7 +173,7 @@ result
 ```html
 atribute-name="value"
 ```
-example data-*
+example attribute data-*
 ```php
 setDataAnimalType('bird');
 ```
@@ -181,7 +181,7 @@ result
 ```html
 data-animal-type="bird"
 ```
-example disabled
+example attribute disabled
 ```php
 setDisabled(true);
 ```
