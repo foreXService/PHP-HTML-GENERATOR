@@ -1,0 +1,16 @@
+{
+    "name": "autoload/namespace",
+    "authors": [
+        {
+            "name": "Andrzej Pierz",
+            "email": "andrzej.pierz@gmail.com"
+        }
+    ],
+    "require": {},
+    "description": "",
+    "autoload": {
+        "psr-4": {
+            "HtmlTagGenerator\\":"HtmlTagGenerator" 
+        }
+    }
+}
