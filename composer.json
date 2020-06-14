@@ -6,7 +6,9 @@
             "email": "andrzej.pierz@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "phpunit/phpunit": "^8.5"
+    },
     "description": "",
     "autoload": {
         "psr-4": {

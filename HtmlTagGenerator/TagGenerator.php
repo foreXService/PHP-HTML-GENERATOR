@@ -24,6 +24,7 @@ class TagGenerator extends AttributeGenerator
     public function setTagName(string $tagName):self
     {
         $this->tagName = $tagName;
+        $this->autoClose = $this->checkAutoClose();
         return $this;
     }
 
@@ -101,13 +102,13 @@ class TagGenerator extends AttributeGenerator
             }
             
         }
-        $html .=  '>' . PHP_EOL;
+        $html .=  '>';
         
         if (!$this->autoClose)
         {
             foreach ($this->children as $child) 
             {
-                    $html .= ' ' . $child . PHP_EOL;
+                    $html .= ' ' . $child;
             }
             $html .=  '</' . $this->tagName . '>';
         }
