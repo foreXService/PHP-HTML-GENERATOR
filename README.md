@@ -164,8 +164,7 @@ result
 </div>
 ```
 
-### More
-* how to generate attributes
+### How to generate attributes
 ```php
 setAtributeName('value')
 ```
@@ -189,4 +188,22 @@ result
 ```html
 disabled
 ```
+### Arguments in constructor
+
+* 'tagName' => string
+* 'echoHtml' => true/false
+* 'attributes' = [string, ...]
+* 'children' = [string, ...]
+* 'autoClose' = true/false
+
+### Standard Functions
+
+* setTagName(string):self
+* echoHtml():self
+* setAttribute(string):self
+* setAttributes([string, ...]):self
+* addChild(string or object TagGenerator):self
+* addChildren([string or object TagGenerator, ...]):self
+* setAutoClose(true/false):self
+* generateHtml():string
 
