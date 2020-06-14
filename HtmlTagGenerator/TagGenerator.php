@@ -108,7 +108,7 @@ class TagGenerator extends AttributeGenerator
         {
             foreach ($this->children as $child) 
             {
-                    $html .= ' ' . $child;
+                    $html .=  $child;
             }
             $html .=  '</' . $this->tagName . '>';
         }
